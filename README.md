@@ -22,7 +22,7 @@ This repository is organized as follows:
 
 ### Folder Contents:
 - **`Dayxx`**: Each day's folder contains:
-  - `px.*`: My solution implementation, written in Python (p1 for problem one, p2 for problem 2).
+  - `px.*`: My solution implementation, written in Python (p1 for problem one, p2 for problem two).
 
 ## Goals
 - Solve each day's puzzle before the end of the day.
