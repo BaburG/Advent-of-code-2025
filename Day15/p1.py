@@ -15,7 +15,6 @@ for i in range(rows):
 
 r, c = start
 
-
 for command in commands:
     dr, dc = { ">": (0, 1), "^": (-1, 0), "<": (0, -1), "v": (1, 0)}[command]
     infront = [(r,c)]
