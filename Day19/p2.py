@@ -1,0 +1,24 @@
+from functools import cache
+
+lines = open("input.txt").read().splitlines()
+
+patterns = set(lines[0].split(", "))
+max_len = max(map(len, patterns))
+
+@cache
+def obtainable(design):
+    if design == "": return 1
+    count = 0
+    for i in range(min(len(design), max_len) + 1):
+        if design[:i] in patterns:
+            count += obtainable(design[i:])
+    #print("NOT POSSIBLE")
+    return count
+
+count = 0
+total = len(lines[2:])
+
+for i, design in enumerate(lines[2:]):
+    count += obtainable(design)
+
+print(count)
